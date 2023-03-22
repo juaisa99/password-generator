@@ -46,11 +46,11 @@ if (passwordLength === null || passwordLength < 8 || passwordLength > 128) {
   for (var i = 0; i < passwordLength; i++) {
     // console.log(Math.floor(Math.random() * allChars.length))
     var randomChar = passwordLength[Math.floor(Math.random() * passwordLength)]
-    // console.log(randomChar)
+    console.log(randomChar)
     allChars.push(randomChar)
   }
 
-  console.log(allChars);
+  return allChars.join('');
 }
   
 }
