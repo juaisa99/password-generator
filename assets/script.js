@@ -6,7 +6,7 @@ var lowerCasedCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',];
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var allChars = [];
-
+var password = [];
 
 
 function generatePassword() {
@@ -45,12 +45,12 @@ if (passwordLength === null || passwordLength < 8 || passwordLength > 128) {
 
   for (var i = 0; i < passwordLength; i++) {
     // console.log(Math.floor(Math.random() * allChars.length))
-    var randomChar = passwordLength[Math.floor(Math.random() * passwordLength)]
+    var randomChar = allChars[Math.floor(Math.random() * allChars.length)]
     console.log(randomChar)
-    allChars.push(randomChar)
+    password.push(randomChar)
   }
 
-  return allChars.join('');
+  return password.join('');
 }
   
 }
